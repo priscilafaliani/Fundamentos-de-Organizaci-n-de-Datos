@@ -1,6 +1,6 @@
 program ejemplo2;
 
-const VALOR_CORTE = 32767;
+const VALOR_CORTE = '9999';
 
 type 
 
@@ -23,7 +23,7 @@ begin
     if (not eof(detalle)) then
         read(detalle, venta)
     else
-        venta.codigo := 32767;
+        venta.codigo := VALOR_CORTE;
 end;
 
 var
