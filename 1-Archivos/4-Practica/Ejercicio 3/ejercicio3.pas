@@ -298,7 +298,7 @@ begin
     // --- --- --- --- -
 
     // actualizo stock
-    // actualizar_stock(productos, ventas);
+    actualizar_stock(productos, ventas);
 
 
     crear_informe_productos(productos);
