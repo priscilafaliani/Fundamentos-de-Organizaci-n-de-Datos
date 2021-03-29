@@ -210,6 +210,7 @@ begin
     while (alumno_detalle.codigo <> -32767) do
     begin
         // busco el alumno en el archivo maestro
+        // ESTO DEBERIA SER UN LEER CON CHECKEO DE ERROR!!!!
         read(maestro, alumno_maestro);
         while ((not eof(maestro)) and (alumno_maestro.codigo <> alumno_detalle.codigo)) do 
             read(maestro, alumno_maestro);
