@@ -3,6 +3,7 @@
     utilizar en archivos
 }
 
+// MODIFICAR PARA QUE SEA LECTURA DESDE BINARIO O DESDE TEXTO
 procedure leer(var archivo : archivo_de_x; var registro : reg_de_x);
 begin
     if (not eof(archivo)) then
@@ -12,7 +13,7 @@ begin
 end;
 
 
-// CAMBIAR EL NOMBRE SEGÚN SE DESEE
+// CAMBIAR EL NOMBRE DE LOS ARCHIVOS SEGÚN SE DESEE
 procedure conectar_archivos(var archivos : arr_archivos);
 var i : integer;
 begin
@@ -45,7 +46,7 @@ procedure iniciar_arr_registros_lectura(var archivos : arr_archivos; var registr
 var i : integer;
 begin
     for i := 1 to CONSTANTE do
-        leer(archivos[i], registros_de_x[i]);
+        leer(archivos[i], registros[i]);
 end;
 
 
