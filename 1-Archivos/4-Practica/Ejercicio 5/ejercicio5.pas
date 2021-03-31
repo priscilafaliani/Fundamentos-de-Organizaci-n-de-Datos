@@ -48,3 +48,5 @@ type
     archivo_fallecimiento = file of reg_fallecimiento;
 
     arr_archivo_fallecimiento = array[1..DELEGACIONES] of archivo_fallecimiento;
+
+{ preguntar como escribir los datos en el archivo maestro. es un registro de largo variable? }
