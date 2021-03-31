@@ -187,3 +187,37 @@ begin
         readln(eleccion);
     end;    
 end;
+
+// estructura de fecha, lo pide en muchos ejercicios
+type
+    rango_anios = 2020..2021;
+    rango_meses = 1..12;
+    rango_dias = 1..31;
+
+    reg_fecha = record
+        anio : rango_anios;
+        mes : rango_meses;
+        dia : rango_dias;
+    end;
+
+function es_menor(fecha1, fecha2 : reg_fecha): boolean;
+var menor : boolean;
+begin
+    if (fecha1.anio < fecha2.anio) then
+        menor := true
+    else if (fecha1.anio = fecha2.anio) and (fecha1.mes < fecha2.mes) then
+        menor := true
+    else if (fecha1.anio = fecha2.anio) and (fecha1.mes = fecha2.mes) and (fecha1.dia < fecha2.dia) then
+        menor := true
+    else
+        menor := false;
+    es_menor := menor;
+end;
+
+
+function es_mismo_dia(fecha1, fecha2 : reg_fecha): boolean;
+begin
+    es_mismo_dia := (fecha1.anio = fecha2.anio) and (fecha1.mes = fecha2.mes) and (fecha1.dia = fecha2.dia);
+end;
+
+/////////////////////////////////////////////////////////////////////
