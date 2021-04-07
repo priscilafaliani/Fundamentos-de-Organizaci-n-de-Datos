@@ -61,6 +61,23 @@ begin
         leer(archivos[pos], registros[pos]);
 end;
 
+
+procedure minimo(var minimo, reg1, reg2 : reg_detalle; var detalle1, detalle2 : archivo_detalle);
+begin
+    minimo.provincia := CODIGO_FIN;
+
+    if reg1.provincia < reg2.provincia then
+    begin
+        minimo := reg1
+        leer(detalle1, reg1);
+    end
+    else begin
+        minimo := reg2;
+        leer(detalle2, reg2);        
+    end;
+end;
+
+
 // modificar tipos de variables y eso
 procedure crear_archivo_maestro();
 var
